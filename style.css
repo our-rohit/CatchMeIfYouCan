@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  background: linear-gradient(135deg, #FAC6FC, #FFD1DC);
+  font-size: 16px;
+  font-family: 'Pacifico', cursive, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  gap: 1.1rem;
+  animation: fadeIn 1s ease-in;
+}
+
+.ques {
+  font-size: clamp(2.4rem, 5vw, 3rem);
+  padding: 0.5rem;
+  color: #E10087;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.output {
+  padding: 0.5rem;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  color: #9328CC;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: opacity 0.3s ease;
+}
+
+.no-btn, .yes-btn {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  height: 2.3rem;
+  font-size: 1.3rem;
+  aspect-ratio: 2 / 1.1;
+  border-radius: 0.6rem;
+  border: none;
+  color: white;
+  box-shadow: inset 0px 0px 13px rgba(255, 255, 255, 0.5), 5px 5px 10px #0000006E;
+  
+  transition: left 0.3s ease, top 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.no-btn:active, .yes-btn:active {
+  transform: translateY(3px) scale(0.98);
+  box-shadow: inset 0px 2px 5px rgba(0,0,0,0.5);
+}
+
+.no-btn {
+  background: linear-gradient(to bottom, #FF757E, #FF2E3B);
+}
+.yes-btn {
+  background: linear-gradient(to bottom, #838DFF, #4E5CFF);
+}
+
+/*.no-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #FF2E3B;
+}
+.yes-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #4E5CFF;
+}*/
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
